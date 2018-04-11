@@ -1,0 +1,35 @@
+{
+  "name": "cordova-plugin-liveperson",
+  "version": "2.3.17",
+  "description": "Cordova plugin for Live Person SDK integration",
+  "main": "www/LPMessagingSDK.js",
+  "types": "www/LPMessagingSDK.d.ts",
+  "cordova": {
+    "id": "cordova-plugin-liveperson",
+    "platforms": [
+      "android",
+      "ios",
+      "wp8"
+    ]
+  },
+  "scripts": {
+    "build": "tsc",
+    "prepublish": "npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@git.talkdev.co.uk:talktalk/cordova-plugin-liveperson.git"
+  },
+  "author": "Drew Higginson <me@drewzh.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/cordova": "0.0.34",
+    "typescript": "^2.4.2"
+  },
+  "dependencies": {
+    "@angular/core": "^4.4.4",
+    "@types/cordova": "0.0.34",
+    "cordova": "^7.0.1"
+  }
+}
