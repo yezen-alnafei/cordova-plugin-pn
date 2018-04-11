@@ -22,12 +22,13 @@ import Foundation
 
     // MARK: Public API methods
 
-    @objc func get_unread_message_count(_ command: CDVInvokedUrlCommand) {
+    @objc func get_push_notification_token(_ command: CDVInvokedUrlCommand) {
 
          if let pushToken = appDelegatePushNotificationToken() {
-            
+
+             let string = String(data: pushToken, encoding: NSUTF8StringEncoding)
            prepareCallback(command)
-            .ok(pushToken, keepCallback: true)
+            .ok(string, keepCallback: true)
 
         } else{
 
