@@ -1,11 +1,11 @@
 {
-  "name": "cordova-plugin-liveperson",
+  "name": "cordova-plugin-push-notification",
   "version": "2.3.17",
   "description": "Cordova plugin for Live Person SDK integration",
   "main": "www/LPMessagingSDK.js",
   "types": "www/LPMessagingSDK.d.ts",
   "cordova": {
-    "id": "cordova-plugin-liveperson",
+    "id": "cordova-plugin-push-notification",
     "platforms": [
       "android",
       "ios",
@@ -19,7 +19,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@git.talkdev.co.uk:talktalk/cordova-plugin-liveperson.git"
+    "url": "git@github.com:yezen-alnafei/cordova-plugin-pn.git"
   },
   "author": "Drew Higginson <me@drewzh.com>",
   "license": "ISC",

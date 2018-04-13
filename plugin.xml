@@ -18,9 +18,9 @@
         <param name="ios-package" value="LPMessagingSDKPlugin" />
       </feature>
     </config-file>
-    <source-file src="src/ios/LPCordovaCallback.swift" />
-    <source-file src="src/ios/LPMessagingSDKPlugin.swift" />
-    <source-file src="src/ios/LPSDKCordovaSample-Bridging-Header.h" />
+    <source-file src="src/ios/PNCordovaCallback.swift" />
+    <source-file src="src/ios/PNSDKPlugin.swift" />
+    <source-file src="src/ios/PNSDKCordovaSample-Bridging-Header.h" />
   </platform>
 
 </plugin>
