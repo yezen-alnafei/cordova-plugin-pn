@@ -25,10 +25,10 @@ import Foundation
 
          if let pushToken = appDelegatePushNotificationToken() {
             
-            let tokenString = NSString(data: pushToken, encoding: String.Encoding.utf8.rawValue)
-            
+            let resultNSString = pushToken.map { String(format: "%02.2hhx", $0) }.joined()
+                        
             prepareCallback(command)
-            .ok(tokenString, keepCallback: true)
+            .ok(resultNSString, keepCallback: true)
 
         } else{
             prepareCallback(command)
