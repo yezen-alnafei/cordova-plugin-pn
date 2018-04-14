@@ -22,16 +22,6 @@ import UserNotifications
     func prepareCallback(_ from: CDVInvokedUrlCommand) -> LPCordovaCallback {
         return LPCordovaCallback(delegate: commandDelegate, command: from)
     }
-    
-    // Native fetching of push tokens
-    // Requires AppDelegate to be hooked into the Cordova build
-    func appDelegatePushNotificationToken() -> Data? {
-        if let delegate = UIApplication.shared.delegate as? AppDelegate {
-            return delegate.pnToken
-        }
-        
-        return nil
-    }
 
     // MARK: Public API methods
     @objc func get_push_notification_token(_ command: CDVInvokedUrlCommand) {
