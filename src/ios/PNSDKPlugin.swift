@@ -6,7 +6,6 @@ import UserNotifications
     static var pnToken: String?
     
     override func pluginInitialize() {
-        
         if #available(iOS 10.0, *) {
             UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) {
                 (granted, error) in
@@ -35,11 +34,8 @@ import UserNotifications
     }
 
     // MARK: Public API methods
-
     @objc func get_push_notification_token(_ command: CDVInvokedUrlCommand) {
-
         if (LPMessagingSDKPlugin.pnToken != nil) {
-            
             prepareCallback(command)
             .ok(LPMessagingSDKPlugin.pnToken, keepCallback: true)
 
@@ -51,11 +47,14 @@ import UserNotifications
 }
 
 extension AppDelegate{
+   
     open override func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
         var token = ""
+        
         for i in 0..<deviceToken.count {
             token = token + String(format: "%02.2hhx", arguments: [deviceToken[i]])
         }
+
         LPMessagingSDKPlugin.pnToken = token
         
         print("Permission granted with push notification Token: \(token)")
