@@ -57,6 +57,8 @@ extension AppDelegate{
             token = token + String(format: "%02.2hhx", arguments: [deviceToken[i]])
         }
         LPMessagingSDKPlugin.pnToken = token
+        
+        print("Permission granted with push notification Token: \(token)")
     }
     
    open override func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
