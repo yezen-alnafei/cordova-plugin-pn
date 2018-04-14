@@ -67,8 +67,11 @@ export class LPMessagingSdk {
     * Get the number of unread messages.
     * @returns {Promise<number>}
     */
-    getPushNotificationToken(): Promise<string> {
+    init(): Promise<string> {
+        return sdkPromise('init_push_notification', []);
+    }
 
+    getPushNotificationToken(): Promise<string> {
         return sdkPromise('get_push_notification_token', []);
     }
 }

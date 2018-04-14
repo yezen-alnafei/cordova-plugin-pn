@@ -5,7 +5,13 @@ import UserNotifications
     
     static var pnToken: String?
     
-    override func pluginInitialize() {
+    // Prepare a callback to trigger a response to the JS consumer when native commands have finished
+    func prepareCallback(_ from: CDVInvokedUrlCommand) -> LPCordovaCallback {
+        return LPCordovaCallback(delegate: commandDelegate, command: from)
+    }
+
+    // init push notification
+    @objc func init_push_notification(_ command: CDVInvokedUrlCommand) {
         if #available(iOS 10.0, *) {
             UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) {
                 (granted, error) in
@@ -16,11 +22,9 @@ import UserNotifications
             UIApplication.shared.registerUserNotificationSettings(settings)
             UIApplication.shared.registerForRemoteNotifications()
         }
-    }
-    
-    // Prepare a callback to trigger a response to the JS consumer when native commands have finished
-    func prepareCallback(_ from: CDVInvokedUrlCommand) -> LPCordovaCallback {
-        return LPCordovaCallback(delegate: commandDelegate, command: from)
+
+         prepareCallback(command)
+            .ok("Done", keepCallback: true)
     }
 
     // MARK: Public API methods

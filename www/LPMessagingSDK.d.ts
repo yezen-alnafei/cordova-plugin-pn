@@ -15,6 +15,7 @@ export declare class LPMessagingSdk {
     * Get the number of unread messages.
     * @returns {Promise<number>}
     */
+    init(): Promise<string>;
     getPushNotificationToken(): Promise<string>;
 }
 export declare const lpSdkInstance: LPMessagingSdk;
