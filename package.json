@@ -7,9 +7,7 @@
   "cordova": {
     "id": "cordova-plugin-push-notification",
     "platforms": [
-      "android",
-      "ios",
-      "wp8"
+      "ios"
     ]
   },
   "scripts": {
@@ -21,7 +19,7 @@
     "type": "git",
     "url": "git@github.com:yezen-alnafei/cordova-plugin-pn.git"
   },
-  "author": "Drew Higginson <me@drewzh.com>",
+  "author": "Yezen Alnafei",
   "license": "ISC",
   "devDependencies": {
     "@types/cordova": "0.0.34",
