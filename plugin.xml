@@ -3,9 +3,9 @@
 
   <name>CordovaPushNotificationPlugin</name>
 
-  <engines>
+  <!-- <engines>
     <engine name="cordova" version=">=3.4.0" />
-  </engines>
+  </engines> -->
 
   <asset src="www/PushNotificationToken.js" target="js/PushNotificationToken.js" />
   <asset src="www/PushNotificationToken.js.map" target="js/PushNotificationToken.js.map" />
