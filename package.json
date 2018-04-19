@@ -17,7 +17,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:yezen-alnafei/cordova-plugin-pn.git"
+    "url": "https://github.com/yezen-alnafei/cordova-plugin-pn.git#1.0"
   },
   "author": "Yezen Alnafei",
   "license": "ISC",
