@@ -49,4 +49,4 @@ var LPMessagingSdk = /** @class */ (function () {
 }());
 exports.LPMessagingSdk = LPMessagingSdk;
 exports.lpSdkInstance = new LPMessagingSdk();
-//# sourceMappingURL=LPMessagingSDK.js.map
+//# sourceMappingURL=PushNotificationToken.js.map
