@@ -1,11 +1,11 @@
 {
-  "name": "cordova-plugin-push-notification",
+  "name": "cordova-plugin-push-notification-token",
   "version": "2.3.17",
   "description": "Cordova plugin for Live Person SDK integration",
-  "main": "www/LPMessagingSDK.js",
-  "types": "www/LPMessagingSDK.d.ts",
+  "main": "www/PushNotificationToken.js",
+  "types": "www/PushNotificationToken.d.ts",
   "cordova": {
-    "id": "cordova-plugin-push-notification",
+    "id": "cordova-plugin-push-notification-token",
     "platforms": [
       "ios"
     ]
@@ -17,7 +17,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:yezen-alnafei/cordova-plugin-pn.git"
+    "url": "https://github.com/yezen-alnafei/cordova-plugin-pn.git"
   },
   "author": "Yezen Alnafei",
   "license": "ISC",
