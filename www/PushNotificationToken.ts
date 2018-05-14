@@ -60,7 +60,7 @@ const sdkPromise = (action: string, args: any[]): Promise<any> =>
 /**
  * Provides an interface to the LivePerson Messaging SDK.
  */
-export class LPMessagingSdk {
+export class PushNotificationToken {
 
     /** Internally tracks whether the SDK has been initialised. 
     /**
@@ -73,4 +73,4 @@ export class LPMessagingSdk {
     }
 }
 
-export const lpSdkInstance = new LPMessagingSdk();
+export const pushNotificationTokenInstance = new PushNotificationToken();

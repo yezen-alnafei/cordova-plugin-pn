@@ -34,19 +34,19 @@ var sdkPromise = function (action, args) {
 /**
  * Provides an interface to the LivePerson Messaging SDK.
  */
-var LPMessagingSdk = /** @class */ (function () {
-    function LPMessagingSdk() {
+var PushNotificationToken = /** @class */ (function () {
+    function PushNotificationToken() {
     }
     /** Internally tracks whether the SDK has been initialised.
     /**
     * Get the number of unread messages.
     * @returns {Promise<number>}
     */
-    LPMessagingSdk.prototype.getPushNotificationToken = function () {
+    PushNotificationToken.prototype.getPushNotificationToken = function () {
         return sdkPromise('get_push_notification_token', []);
     };
-    return LPMessagingSdk;
+    return PushNotificationToken;
 }());
-exports.LPMessagingSdk = LPMessagingSdk;
-exports.lpSdkInstance = new LPMessagingSdk();
+exports.PushNotificationToken = PushNotificationToken;
+exports.pushNotificationTokenInstance = new PushNotificationToken();
 //# sourceMappingURL=PushNotificationToken.js.map

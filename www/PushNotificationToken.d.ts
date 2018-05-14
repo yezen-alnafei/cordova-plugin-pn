@@ -9,7 +9,7 @@ export declare type SdkErrorHandler = (err: any) => any;
 /**
  * Provides an interface to the LivePerson Messaging SDK.
  */
-export declare class LPMessagingSdk {
+export declare class PushNotificationToken {
     /** Internally tracks whether the SDK has been initialised.
     /**
     * Get the number of unread messages.
@@ -17,4 +17,4 @@ export declare class LPMessagingSdk {
     */
     getPushNotificationToken(): Promise<string>;
 }
-export declare const lpSdkInstance: LPMessagingSdk;
+export declare const pushNotificationTokenInstance: PushNotificationToken;
